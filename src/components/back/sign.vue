@@ -34,7 +34,7 @@ export default {
         return
       }
 
-      axios.get('http://192.168.43.54:3000/getUser/' + this.name).then(
+      axios.get('http://120.77.241.163:3000/getUser/' + this.name).then(
         response => {
           console.log(response)
           if (response.data.username === _this.name) {
@@ -48,7 +48,7 @@ export default {
               password: _this.password
             }
 
-            axios.post('http://192.168.43.54:3000/signup', {
+            axios.post('http://120.77.241.163:3000/signup', {
               userInfo: obj
             }).then(
               response => {
@@ -78,7 +78,7 @@ export default {
         return
       }
 
-      axios.get('http://192.168.43.54:3000/getUser/' + this.name).then(
+      axios.get('http://120.77.241.163:3000/getUser/' + this.name).then(
         response => {
           console.log(response)
           if (_this.password !== response.data.password) {
@@ -88,7 +88,7 @@ export default {
               username: _this.name,
               password: _this.password
             }
-            axios.post('http://192.168.43.54:3000/signin', {
+            axios.post('http://120.77.241.163:3000/signin', {
               userInfo: obj
             }).then(
               response => {

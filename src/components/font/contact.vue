@@ -3,7 +3,13 @@
     <Header></Header>
     <Nav :title1="title1" :title2="title2" :title3="title3" :title4="title4"></Nav>
     <div class="home-content">
-      测试联系我
+      <div class="homeContent">
+        <h1>关于我</h1>
+        <ul>
+          <li>原来博客：<a href="http://www.chenxiaolani.com" target="_blank">http://www.chenxiaolani.com</a></li>
+          <li>GitHub：<a href="https://github.com/mywebc" target="_blank">https://github.com/mywebc</a></li>
+        </ul>
+      </div>
     </div>
     <Footer></Footer>
   </div>
@@ -53,15 +59,9 @@ export default {
         margin 10px
         border: 1px solid #aaa
         box-shadow 1px 1px 1px gray
-        h1
-          color #000
-          font-size 24px
-          font-family "新宋体"
-          margin 10px
-        label
-          color #000
-          font-size 16px
-          display block
-        p
-          min-height 200px
+        min-height 60vh
+        ul
+          li
+            display block
+            text-align left
 </style>

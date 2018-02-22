@@ -61,7 +61,7 @@ export default {
     }
   },
   mounted () {
-    axios.get('http://192.168.43.54:3000/getArticleDetail/' + this.$route.params.id).then(
+    axios.get('http://120.77.241.163:3000/getArticleDetail/' + this.$route.params.id).then(
       (response) => {
         this.article = response.data
       }

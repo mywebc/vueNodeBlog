@@ -12,9 +12,9 @@
         <router-link class="tab-item" to="/labelsManage">
           <span class="active">{{title3}}</span>
         </router-link>
-        <router-link class="tab-item" to="/sign">
-          <span class="active">{{title4}}</span>
-        </router-link>
+        <!--<router-link class="tab-item" to="/sign">-->
+          <!--<span class="active">{{title4}}</span>-->
+        <!--</router-link>-->
       </div>
     </div>
     <div class="home-content">
@@ -106,7 +106,7 @@ export default {
     },
     // 更新数据
     fetchData: function () {
-      axios.get('http://192.168.43.54:3000/getArticle').then((response) => {
+      axios.get('http://120.77.241.163:3000/getArticle').then((response) => {
         this.articleTotal = response.data.reverse()
       })
     },

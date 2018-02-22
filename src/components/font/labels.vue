@@ -44,7 +44,7 @@ export default {
     }
   },
   mounted () {
-    axios.get('http://192.168.43.54:3000/getArticle')
+    axios.get('http://120.77.241.163:3000/getArticle')
       .then((response) => {
         this.articleTotal = response.data.reverse()
         this.articleTotal.forEach((val) => {

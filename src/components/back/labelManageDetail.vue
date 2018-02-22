@@ -12,9 +12,9 @@
         <router-link class="tab-item" to="/labelsManage">
           <span class="active">{{title3}}</span>
         </router-link>
-        <router-link class="tab-item" to="/sign">
-          <span class="active">{{title4}}</span>
-        </router-link>
+        <!--<router-link class="tab-item" to="/sign">-->
+          <!--<span class="active">{{title4}}</span>-->
+        <!--</router-link>-->
       </div>
     </div>
     <div class="home-content">
@@ -67,7 +67,7 @@ export default {
     }
   },
   mounted () {
-    axios.get('http://192.168.43.54:3000/getLabelDetail/' + this.$route.params.label).then(
+    axios.get('http://120.77.241.163:3000/getLabelDetail/' + this.$route.params.label).then(
       (response) => {
         this.labelArticle = response.data
       }
@@ -98,7 +98,7 @@ export default {
         cancelButtonText: '取消',
         type: 'warning'
       }).then(() => {
-        axios.post('http://192.168.43.54:3000/deleteArticle', {
+        axios.post('http://120.77.241.163:3000/deleteArticle', {
           params: {
             _id: id
           }

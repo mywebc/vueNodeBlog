@@ -12,9 +12,9 @@
         <router-link class="tab-item" to="/labelsManage">
           <span class="active">标签管理</span>
         </router-link>
-        <router-link class="tab-item" to="/sign">
-          <span class="active">关于我</span>
-        </router-link>
+        <!--<router-link class="tab-item" to="/sign">-->
+          <!--<span class="active">关于我</span>-->
+        <!--</router-link>-->
       </div>
     </div>
     <div class="home-content">
@@ -141,7 +141,7 @@ export default {
         return
       }
       if (this.$route.params.id) {
-        axios.post('http://192.168.43.54:3000/updateArticle', {
+        axios.post('http://120.77.241.163:3000/updateArticle', {
           params: {
             'title': this.title,
             'date': this.moment().format('YYYY-MM-DD HH:mm:ss'),
@@ -158,7 +158,7 @@ export default {
         })
         self.refreshArticleList()
       } else {
-        axios.post('http://192.168.43.54:3000/saveArticle', {
+        axios.post('http://120.77.241.163:3000/saveArticle', {
           params: {
             'title': this.title,
             'date': this.moment().format('YYYY-MM-DD HH:mm:ss'),
@@ -185,7 +185,7 @@ export default {
   },
   mounted () {
     if (this.$route.params.id) {
-      axios.get('http://192.168.43.54:3000/getArticleDetail/' + this.$route.params.id).then(
+      axios.get('http://120.77.241.163:3000/getArticleDetail/' + this.$route.params.id).then(
         response => {
           let article = response.data
           this.title = article.title
